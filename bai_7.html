@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var array=[];
+    var index=0;
+    for (var i=0;i<10;i++){
+        var x=prompt("Nhập phần tử "+i+": ",0);
+        array.push(x);
+    }
+    var v=prompt("Nhập số nguyên V: ",0);
+    var bool=false;
+    for (var i=0;i<array.length;i++){
+        if (array[i]==v){
+            bool=true;
+            index=i;
+        }
+    }
+    if (bool){
+        for (var i=index;i<array.length-1;i++){
+            array[i]=array[i+1];
+        }
+        array[9]=0;
+        for (var i=0;i<array.length;i++){
+            document.writeln(array[i]);
+        }
+    }
+    else alert("V is not in the array");
+</script>
+</body>
+</html>

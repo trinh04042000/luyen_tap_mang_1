@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+    var arrayInt = [45,18,22,26,-45,3,0,24,10,50];
+    var max = arrayInt[0];
+    var index;
+    var sum = average = 0;
+    for (var i = 0; i < arrayInt.length; i++){
+        if (max < arrayInt[i]){
+            max = arrayInt[i];
+            index = i;
+        }
+        sum += arrayInt[i];
+    }
+    document.write('Số ' + max + ' là số lớn nhất và ở vị trí ' + index + '<br/>');
+    average = sum / arrayInt.length;
+    document.write('Trung bình cộng: ' + average);
+</script>
+</body>
+</html>
